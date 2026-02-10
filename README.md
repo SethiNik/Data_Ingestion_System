@@ -4,19 +4,16 @@ A production-ready data ingestion system that fetches HTML tables from URLs, aut
 
 ## 🏗️ Architecture
 
+```mermaid
+flowchart LR
+    A["HTML Table<br/>(Source)"] --> B["Go API<br/>Parser"]
+    B --> C["Kafka<br/>Stream"]
+    C --> D["MySQL<br/>DB"]
+    B --> E["Dashboard<br/>UI"]
+    D --> F["Metabase<br/>Analytics"]
+    F --> E
 ```
-┌─────────────┐     ┌──────────┐     ┌─────────┐     ┌─────────┐
-│  HTML Table │────▶│   Go API │────▶│  Kafka  │────▶│  MySQL  │
-│   (Source)  │     │  Parser  │     │ Stream  │     │   DB    │
-└─────────────┘     └──────────┘     └─────────┘     └─────────┘
-                          │                                 │
-                          │                                 │
-                          ▼                                 ▼
-                    ┌──────────┐                     ┌──────────┐
-                    │Dashboard │◀────────────────────│ Metabase │
-                    │   UI     │                     │Analytics │
-                    └──────────┘                     └──────────┘
-```
+
 
 ## ✨ Features
 
@@ -290,10 +287,6 @@ mysql> SELECT * FROM your_table_name LIMIT 10;
 allowPublicKeyRetrieval=true&useSSL=false
 ```
 
-### Salary Showing as 0
-
-This was caused by not cleaning currency symbols. **Fixed** in latest version.
-
 ### Kafka Not Starting
 
 Wait 30 seconds after `docker-compose up` - Kafka needs time to initialize.
@@ -318,19 +311,6 @@ fintech_pipeline/
 │   └── app.js                 # Frontend logic
 └── README.md                  # This file
 ```
-
-## 🔄 Future Enhancements
-
-- [ ] Support for CSV/JSON APIs
-- [ ] Scheduled ingestion (cron-like)
-- [ ] Data validation rules
-- [ ] Email notifications
-- [ ] Multi-table joins
-- [ ] Delta/incremental loads
-- [ ] Schema version management
-- [ ] Audit logging
-- [ ] Role-based access control
-- [ ] Webhook integrations
 
 ## 📝 API Reference
 
