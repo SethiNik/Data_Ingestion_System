@@ -105,16 +105,13 @@ metabase    Running   0.0.0.0:3000->3000/tcp
 
 ### 3. Example URLs to Try
 
-**Wikipedia Tables** (Clean, well-structured):
+
 ```
-https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
-https://en.wikipedia.org/wiki/List_of_largest_companies_by_revenue
+https://datatables.net/
+https://www.w3schools.com/html/html_tables.asp
 ```
 
-**Government Data** (Various formats):
-```
-https://data.gov (various datasets)
-```
+
 
 ## 🔧 Configuration
 
