@@ -1,0 +1,93 @@
+<html>
+<head>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+<header>
+System Architecture
+<nav>
+<a href="/">Dashboard</a>
+<a href="/data.html">Database</a>
+<a href="/architecture.html">Architecture</a>
+<a href="/about.html">About</a>
+</nav>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Data Flow Architecture</h2>
+
+<pre>
+User URL Input
+      │
+      ▼
+Frontend Dashboard
+      │
+      ▼
+Go Backend API
+      │
+      ▼
+HTML Table Parser
+      │
+      ▼
+Kafka Producer
+      │
+      ▼
+Kafka Topic Stream
+      │
+      ▼
+Kafka Consumer
+      │
+      ▼
+Dynamic MySQL Storage
+      │
+      ▼
+Database Viewer Dashboard
+</pre>
+
+</div>
+
+<div class="card">
+<h3>Component Responsibilities</h3>
+
+<ul>
+<li>Frontend handles ingestion requests and previews data.</li>
+<li>Backend extracts tables and infers schema.</li>
+<li>Kafka decouples ingestion and persistence.</li>
+<li>Consumer persists records into MySQL.</li>
+<li>Dashboard enables ingestion validation.</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>Scalability Model</h3>
+
+<ul>
+<li>Multiple producers can ingest concurrently.</li>
+<li>Kafka partitions allow parallel consumers.</li>
+<li>Database writes can be batched.</li>
+<li>Services can scale independently.</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>Production Deployment Model</h3>
+
+<ul>
+<li>Containerized services via Docker.</li>
+<li>Environment driven configuration.</li>
+<li>Stateless ingestion services.</li>
+<li>Reusable ingestion pipelines.</li>
+</ul>
+
+</div>
+
+</div>
+
+</body>
+</html>

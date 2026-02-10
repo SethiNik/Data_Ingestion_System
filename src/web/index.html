@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="/css/styles.css">
+<script src="/js/app.js"></script>
+</head>
+
+<body>
+
+<header>
+Ingestion Dashboard
+<nav>
+<a href="/">Dashboard</a>
+<a href="/data.html">Database</a>
+<a href="/architecture.html">Architecture</a>
+<a href="/about.html">About</a>
+</nav>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h3>Ingestion Controls</h3>
+
+URL<br>
+<input id="url"><br>
+
+Table Name<br>
+<input id="table"><br>
+
+Mode<br>
+<select id="mode">
+<option value="create">Create</option>
+<option value="append">Append</option>
+</select><br>
+
+<label>
+<input type="checkbox" id="dedup" checked>
+Deduplicate rows
+</label><br><br>
+
+<button onclick="preview()">Preview</button>
+<button onclick="ingest()">Ingest</button>
+
+</div>
+
+<div class="card">
+<h3>Schema</h3>
+<pre id="schema"></pre>
+</div>
+
+<div class="card">
+<h3>Preview Rows</h3>
+<table id="rows"></table>
+</div>
+
+<div class="card">
+<h3>Progress</h3>
+
+<div style="background:#222;height:20px;">
+  <div id="progressBar"
+       style="background:#2563eb;height:20px;width:0%"></div>
+</div>
+
+<pre id="jobStatus">Idle</pre>
+</div>
+
+<div class="card">
+<h3>Live Logs</h3>
+<pre id="logs"></pre>
+</div>
+
+<div class="card">
+<h3>Status</h3>
+<pre id="status">Idle</pre>
+</div>
+
+</div>
+
+</body>
+</html>

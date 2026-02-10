@@ -1,0 +1,85 @@
+/* Global layout styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+/* Header and navigation */
+header {
+  background: #111827;
+  padding: 16px;
+  font-size: 18px;
+}
+
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main container */
+.container {
+  padding: 20px;
+}
+
+/* Reusable content card */
+.card {
+  background: #1e293b;
+  padding: 18px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* Inputs */
+input, select {
+  padding: 8px;
+  margin: 5px 0;
+  width: 300px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* Table display */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #020617;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #334155;
+  font-size: 13px;
+}
+
+/* Sidebar table list */
+.tableItem {
+  padding:8px;
+  cursor:pointer;
+  border-bottom:1px solid #334155;
+}
+
+.tableItem:hover {
+  background:#2563eb;
+}
+
+.tableItem.active {
+  background:#1d4ed8;
+}
